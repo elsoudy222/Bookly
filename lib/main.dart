@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Bookly App',
-        theme: ThemeData(
+        theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
           useMaterial3: true,
         ),
