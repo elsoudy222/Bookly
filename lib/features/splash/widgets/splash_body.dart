@@ -2,10 +2,27 @@ import 'package:bookly/core/utils/const/assets_path/assets_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
-class SplashScreenBody extends StatelessWidget {
+import '../../home/presentation/home_screen.dart';
+
+class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});
+
+  @override
+  State<SplashScreenBody> createState() => _SplashScreenBodyState();
+}
+
+class _SplashScreenBodyState extends State<SplashScreenBody> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    navigateToHome();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,4 +42,12 @@ class SplashScreenBody extends StatelessWidget {
       ],
     );
   }
+
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 3,),(){
+      Get.to(()=> const HomeScreen(), transition: Transition.fadeIn);
+    },);
+  }
+
 }
