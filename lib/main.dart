@@ -1,8 +1,16 @@
 import 'package:bookly/view/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'core/utils/const/colors/colors.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,]);
+
   runApp(const MyApp());
 }
 
@@ -11,14 +19,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Bookly App',
-      theme: ThemeData(
-        useMaterial3: true,
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+        statusBarColor: AppColors.scaffoldBackgroundColor,
+        statusBarBrightness: Brightness.dark));
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      // Use builder only if you need to use library outside ScreenUtilInit context
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Bookly App',
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
+          useMaterial3: true,
+        ),
+        home: const SplashScreen(),
       ),
-      home: const SplashScreen(),
+
     );
+
+
+
   }
 }
 
