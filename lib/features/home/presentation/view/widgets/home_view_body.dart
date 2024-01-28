@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Best Seller",
+                "Best Seller:",
                 style: Styles.textStyle20,
               ),
               BestSellerListViewItem(),
