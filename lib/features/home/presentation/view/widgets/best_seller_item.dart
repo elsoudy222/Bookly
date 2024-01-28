@@ -6,8 +6,6 @@ import '../../../../../core/utils/const/const.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 
-
-
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
 
@@ -19,16 +17,14 @@ class BestSellerListViewItem extends StatelessWidget {
           Container(
             height: 100.h,
             width: 70.w,
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.orange,
               borderRadius: BorderRadius.circular(15),
               image: const DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
                   AssetsPaths.testPic,
-
                 ),
-
               ),
             ),
           ),
@@ -47,8 +43,8 @@ class BestSellerListViewItem extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: Styles.textStyle20.copyWith(
-                     // fontFamily: kGtSectraFine,
-                    ),
+                        // fontFamily: kGtSectraFine,
+                        ),
                   ),
                 ),
                 const SizedBox(
@@ -69,10 +65,10 @@ class BestSellerListViewItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                         const Spacer(),
+                    const Spacer(),
                     const BookRating(
                       rating: 4.8,
-                      count: 245 ,
+                      count: 245,
                     ),
                   ],
                 ),
