@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         title: 'Bookly App',
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
-          useMaterial3: true,
+
           textTheme: GoogleFonts.montserratTextTheme(
             ThemeData.dark().textTheme,
           ),
