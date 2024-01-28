@@ -3,24 +3,37 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/const/assets_path/assets_path.dart';
 
-class CustomListViewItems extends StatelessWidget {
-  const CustomListViewItems({super.key});
+class FeaturedListViewItem extends StatelessWidget {
+  const FeaturedListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 200.h,
-      width: 150.w,
-      decoration: const BoxDecoration(
-        color: Colors.orange,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            AssetsPaths.testPic,
+      child: ListView.builder(
+        itemCount: 3,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, i) {
+          return Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 8.0.r),
+            child: Container(
+              height: 200.h,
+              width: 150.w,
+              decoration:  BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(15),
+                image: const DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    AssetsPaths.testPic,
 
-          ),
+                  ),
 
-        ),
+                ),
+              ),
+            ),
+          );
+        }
       ),
     );
   }
