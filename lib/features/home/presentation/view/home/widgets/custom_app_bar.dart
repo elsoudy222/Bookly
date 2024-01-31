@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
-import '../../../../../core/utils/const/assets_path/assets_path.dart';
+import '../../../../../../core/utils/const/assets_path/assets_path.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});

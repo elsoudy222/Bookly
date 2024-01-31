@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/utils/const/assets_path/assets_path.dart';
-import '../../../../../core/utils/const/const.dart';
-import '../../../../../core/utils/styles.dart';
+
+import '../../../../../../core/utils/const/assets_path/assets_path.dart';
+import '../../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 
 class BestSellerListViewItem extends StatelessWidget {

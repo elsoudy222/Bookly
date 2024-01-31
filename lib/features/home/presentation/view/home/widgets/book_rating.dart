@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 
-import '../../../../../core/utils/styles.dart';
+import '../../../../../../core/utils/styles.dart';
+
 
 class BookRating extends StatelessWidget {
   const BookRating({
