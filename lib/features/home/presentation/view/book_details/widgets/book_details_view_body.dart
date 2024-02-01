@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/presentation/view/book_details/widgets/book_action_button.dart';
 import 'package:bookly/features/home/presentation/view/home/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/view/home/widgets/custom_book_item.dart';
 import 'package:flutter/cupertino.dart';
@@ -48,13 +49,17 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 16.h,
+            height: 10.h,
           ),
           const BookRating(
             rating: 4.9,
             count: 400,
             mainAxisAlignment: MainAxisAlignment.center,
-          )
+          ),
+          SizedBox(
+            height: 30.h,
+          ),
+          const BooksAction(),
         ],
       ),
     );
