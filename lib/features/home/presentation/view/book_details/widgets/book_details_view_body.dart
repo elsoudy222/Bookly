@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/presentation/view/home/widgets/custom_book_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,9 +12,11 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 30.0.w),
-      child: const Column(
+      child:  Column(
         children: [
-          CustomBookDetailsAppBar()
+          const CustomBookDetailsAppBar(),
+          SizedBox(height: 15.h,),
+          const CustomBookItem(),
         ],
       ),
     );
