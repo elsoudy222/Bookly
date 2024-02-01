@@ -2,8 +2,7 @@ import 'package:bookly/core/utils/const/assets_path/assets_path.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
+import 'package:go_router/go_router.dart';
 
 class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});
@@ -13,7 +12,6 @@ class SplashScreenBody extends StatefulWidget {
 }
 
 class _SplashScreenBodyState extends State<SplashScreenBody> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -24,12 +22,15 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsPaths.logoPng,height: 60.h,),
-         SizedBox(
+        Image.asset(
+          AssetsPaths.logoPng,
+          height: 60.h,
+        ),
+        SizedBox(
           height: 10.h,
         ),
         Text(
@@ -41,13 +42,14 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
     );
   }
 
-
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3,),(){
-      // TODO: implement Navigation
-    },);
+    Future.delayed(
+      const Duration(
+        seconds: 3,
+      ),
+      () {
+        GoRouter.of(context).pushReplacement("/homeScreen");
+      },
+    );
   }
-
 }
-
-
