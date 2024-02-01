@@ -1,11 +1,10 @@
+import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utils/const/colors/colors.dart';
-import 'features/splash/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,18 +27,17 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       // Use builder only if you need to use library outside ScreenUtilInit context
-      child: GetMaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Bookly App',
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
-
           textTheme: GoogleFonts.montserratTextTheme(
             ThemeData.dark().textTheme,
           ),
         ),
-
-        home: const SplashScreen(),
+        routerConfig: AppRouter.router,
+        //home: const SplashScreen(),
       ),
 
     );
