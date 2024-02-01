@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'const/const.dart';
 
@@ -10,12 +11,17 @@ abstract class Styles {
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
+
   );
   static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w900,
-    fontFamily: kGtSectraFine,
     letterSpacing: 1.2,
+  );
+  static  TextStyle textStyle25 = TextStyle(
+    fontSize: 25.sp,
+    fontWeight: FontWeight.w900,
+    letterSpacing: 1,
   );
   static const textStyle14 = TextStyle(
     fontSize: 14,

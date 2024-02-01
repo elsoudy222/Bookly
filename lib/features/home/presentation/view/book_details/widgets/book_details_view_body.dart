@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../../core/utils/const/const.dart';
+import '../../../../../../core/utils/styles.dart';
 import 'custom_book_details_appbar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -10,13 +12,40 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 30.0.w),
       child:  Column(
         children: [
           const CustomBookDetailsAppBar(),
           SizedBox(height: 15.h,),
-          const CustomBookItem(),
+          Padding(
+            padding:  EdgeInsets.symmetric(horizontal:  60.0.w),
+            child: const CustomBookImage(),
+          ),
+           SizedBox(
+            height: 10.h,
+          ),
+          Text(
+            "The Jungle Book",
+            style: Styles.textStyle25.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+           SizedBox(
+            height: 4.h,
+          ),
+          Opacity(
+            opacity: .7,
+            child: Text(
+              "Rudyard Kipling",
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
         ],
       ),
     );
