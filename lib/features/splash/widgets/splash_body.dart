@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});
@@ -37,7 +38,14 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
           "Discover Multi Free Books",
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.titleMedium,
-        )
+        ),
+
+        SizedBox(
+          height: 10.h,
+        ),
+        Lottie.asset('assets/svg/loading.json',height: 60.h ),
+        Lottie.network('https://lottie.host/a72b5cee-dea8-401c-bf48-d97b98f6bc02/f5gjNu3OUy.json',height: 60.h ),
+
       ],
     );
   }

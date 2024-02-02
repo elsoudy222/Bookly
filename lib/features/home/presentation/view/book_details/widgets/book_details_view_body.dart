@@ -14,13 +14,14 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30.0.w),
+      padding: EdgeInsets.symmetric(horizontal: 25.0.w),
       child: Column(
         children: [
           const CustomBookDetailsAppBar(),
           SizedBox(
             height: 15.h,
           ),
+          ///////////////////////////////////////////////////////////////
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 60.0.w),
             child: const CustomBookImage(),
@@ -49,18 +50,63 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10.h,
+            height: 5.h,
           ),
           const BookRating(
             rating: 4.9,
             count: 400,
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+          ////////////////////////////////////////////////////////////////
           SizedBox(
-            height: 30.h,
+            height: 20.h,
           ),
           const BooksAction(),
+          SizedBox(
+            height: 15.h,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'You can also like',
+                style: Styles.textStyle14.copyWith(
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              SizedBox(
+                height: 5.h,
+              ),
+              const SimilarBooksListView(),
+            ],
+
+          ),
+          SizedBox(
+            height: 26.h,
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class SimilarBooksListView extends StatelessWidget {
+  const SimilarBooksListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+     // color: Colors.orange,
+      height: MediaQuery.of(context).size.height * 0.15,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index){
+          return Padding(
+            padding:  EdgeInsets.only(right: 8.0.h),
+            child: const CustomBookImage(),
+          );
+        },
       ),
     );
   }
