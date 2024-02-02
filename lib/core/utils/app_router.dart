@@ -1,5 +1,6 @@
 import 'package:bookly/features/home/presentation/view/book_details/book_details_screen.dart';
 import 'package:bookly/features/home/presentation/view/home/home_screen.dart';
+import 'package:bookly/features/search/presentation/view/search_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/splash/splash_screen.dart';
@@ -29,6 +30,14 @@ abstract class AppRouter{
         path: '/bookDetailsScreen',
         builder: ( context,  state) {
           return const BookDetailsScreen();
+        },
+
+      ),
+      // Book Search screen Route:
+      GoRoute(
+        path: '/searchScreen',
+        builder: ( context,  state) {
+          return const SearchScreen();
         },
 
       ),
