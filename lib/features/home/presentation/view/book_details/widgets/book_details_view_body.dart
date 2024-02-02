@@ -1,4 +1,5 @@
 import 'package:bookly/features/home/presentation/view/book_details/widgets/book_action_button.dart';
+import 'package:bookly/features/home/presentation/view/book_details/widgets/similar_books_list_view.dart';
 import 'package:bookly/features/home/presentation/view/home/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/view/home/widgets/custom_book_item.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,24 +91,4 @@ class BookDetailsViewBody extends StatelessWidget {
   }
 }
 
-class SimilarBooksListView extends StatelessWidget {
-  const SimilarBooksListView({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-     // color: Colors.orange,
-      height: MediaQuery.of(context).size.height * 0.15,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (context, index){
-          return Padding(
-            padding:  EdgeInsets.only(right: 8.0.h),
-            child: const CustomBookImage(),
-          );
-        },
-      ),
-    );
-  }
-}
