@@ -55,7 +55,7 @@ class BookModel extends Equatable {
 }
 
 class AccessInfo extends Equatable {
-  AccessInfo({
+  const AccessInfo({
     required this.country,
     required this.viewability,
     required this.embeddable,
@@ -110,7 +110,7 @@ class AccessInfo extends Equatable {
 }
 
 class Epub extends Equatable {
-  Epub({
+  const Epub({
     required this.isAvailable,
   });
 
@@ -129,7 +129,7 @@ class Epub extends Equatable {
 }
 
 class Pdf extends Equatable {
-  Pdf({
+  const Pdf({
     required this.isAvailable,
     required this.acsTokenLink,
   });
@@ -152,7 +152,7 @@ class Pdf extends Equatable {
 }
 
 class SaleInfo extends Equatable {
-  SaleInfo({
+  const SaleInfo({
     required this.country,
     required this.saleability,
     required this.isEbook,
@@ -201,7 +201,7 @@ class SaleInfo extends Equatable {
 }
 
 class SaleInfoListPrice extends Equatable {
-  SaleInfoListPrice({
+  const SaleInfoListPrice({
     required this.amount,
     required this.currencyCode,
   });
@@ -224,7 +224,7 @@ class SaleInfoListPrice extends Equatable {
 }
 
 class Offer extends Equatable {
-  Offer({
+  const Offer({
     required this.finskyOfferType,
     required this.listPrice,
     required this.retailPrice,
@@ -255,7 +255,7 @@ class Offer extends Equatable {
 }
 
 class OfferListPrice extends Equatable {
-  OfferListPrice({
+  const OfferListPrice({
     required this.amountInMicros,
     required this.currencyCode,
   });
@@ -278,7 +278,7 @@ class OfferListPrice extends Equatable {
 }
 
 class SearchInfo extends Equatable {
-  SearchInfo({
+  const SearchInfo({
     required this.textSnippet,
   });
 
@@ -297,7 +297,7 @@ class SearchInfo extends Equatable {
 }
 
 class VolumeInfo extends Equatable {
-  VolumeInfo({
+  const VolumeInfo({
     required this.title,
     required this.subtitle,
     required this.authors,
@@ -405,7 +405,7 @@ class VolumeInfo extends Equatable {
 }
 
 class ImageLinks extends Equatable {
-  ImageLinks({
+  const ImageLinks({
     required this.smallThumbnail,
     required this.thumbnail,
   });
@@ -428,7 +428,7 @@ class ImageLinks extends Equatable {
 }
 
 class IndustryIdentifier extends Equatable {
-  IndustryIdentifier({
+  const IndustryIdentifier({
     required this.type,
     required this.identifier,
   });
@@ -451,7 +451,7 @@ class IndustryIdentifier extends Equatable {
 }
 
 class PanelizationSummary extends Equatable {
-  PanelizationSummary({
+  const PanelizationSummary({
     required this.containsEpubBubbles,
     required this.containsImageBubbles,
   });
@@ -474,7 +474,7 @@ class PanelizationSummary extends Equatable {
 }
 
 class ReadingModes extends Equatable {
-  ReadingModes({
+  const ReadingModes({
     required this.text,
     required this.image,
   });
