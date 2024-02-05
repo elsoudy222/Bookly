@@ -24,7 +24,7 @@ class ServerFailure extends Failure {
       case DioExceptionType.badResponse:
         if (dioError.response != null) {
           return ServerFailure.fromDioError(
-              dioError.response!.statusCode as DioException, dioError.response!.data.);
+              dioError.response!.statusCode as DioException, dioError.response!.data);
         } else {
           return ServerFailure('Unexpected Error, Please try again!');
         }
