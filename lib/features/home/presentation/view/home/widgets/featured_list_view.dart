@@ -41,8 +41,9 @@ class FeaturedBooksListView extends StatelessWidget {
                 }
             ),
           );
-        }
-         return const Center(child: CircularProgressIndicator(),);
+        }else {
+           return const Center(child: CircularProgressIndicator(),);
+         }
       },
     );
   }
