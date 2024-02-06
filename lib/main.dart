@@ -33,9 +33,7 @@ class MyApp extends StatelessWidget {
       // Use builder only if you need to use library outside ScreenUtilInit context
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (_) => FeaturedBookCubit(
-            getIt.get<HomeRepoImpl>(),
-          )),
+          BlocProvider(create: (_) => FeaturedBookCubit(getIt.get<HomeRepoImpl>(),)..getFeaturedBooks()),
 
         ],
         child: MaterialApp.router(

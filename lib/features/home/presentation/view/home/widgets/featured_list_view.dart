@@ -15,17 +15,27 @@ class FeaturedBooksListView extends StatelessWidget {
     return BlocBuilder<FeaturedBookCubit, FeaturedBooksState>(
       builder: (context, state) {
          if (state is FeaturedBooksSuccess){
-          return SizedBox(
-            height: 200.h,
-            child: ListView.builder(
-                itemCount: 3,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, i) {
-                  return Padding(
-                    padding: EdgeInsets.only(left: 13.0.w),
-                    child: const CustomBookImage(),
-                  );
-                }
+          return GestureDetector(
+            onTap: (){
+              // TODO : ADD NAVIGATION :
+
+            },
+            child: SizedBox(
+              height: 170.h,
+              child: ListView.builder(
+                  itemCount: state.books.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, i) {
+                    return Padding(
+                      padding: EdgeInsets.only(left: 13.0.w),
+                      child:  CustomBookImage(
+                        imageUrl:state.books[i].volumeInfo!.imageLinks
+                            ?.thumbnail ??
+                            '',
+                      ),
+                    );
+                  }
+              ),
             ),
           );
         }
