@@ -1,3 +1,4 @@
+import 'package:bookly/features/home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,7 +9,8 @@ import 'book_action_button.dart';
 
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+ final BookModel bookModel;
+  const BookDetailsSection({super.key, required this.bookModel});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 60.0.w),
-          child:  CustomBookImage(imageUrl: '',),
+          child:  const CustomBookImage(imageUrl: '',),
         ),
         SizedBox(
           height: 10.h,
