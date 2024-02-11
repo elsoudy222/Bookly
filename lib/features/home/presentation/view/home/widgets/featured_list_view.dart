@@ -4,22 +4,17 @@ import 'package:bookly/features/home/presentation/view_model/featured_books_cubi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'custom_book_item.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FeaturedBookCubit, FeaturedBooksState>(
       builder: (context, state) {
          if (state is FeaturedBooksSuccess){
           return GestureDetector(
-            onTap: (){
-              // TODO : ADD NAVIGATION :
-
-            },
+            onTap: (){},
             child: SizedBox(
               height: 170.h,
               child: ListView.builder(
